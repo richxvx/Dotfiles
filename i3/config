@@ -6,7 +6,8 @@ for_window [class="^.*"] border pixel 0
 
 gaps inner 10
 gaps outer 10
-smart_gaps on
+#smart_gaps on
+border_radius 4
 
 # ====================== FLOATING WINDOWS ============================
 for_window [class="Lxappearance"] floating enable
@@ -24,7 +25,7 @@ workspace 3 output HDMI1
 workspace 4 output eDP1
 
 # ====================== EXECUTE ON STARTUP ============================
-exec --no-startup-id xfce4-panel
+exec --no-startup-id polybar  example -r
 exec --no-startup-id nm-applet
 exec --no-startup-id compton
 exec --no-startup-id nitrogen --restore
@@ -36,7 +37,6 @@ exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080 --output eDP1 --mode
 
 # ====================== KEYBINDS ============================
 bindsym $mod+s exec xfce4-screenshooter
-bindsym Ctrl+$mod+t exec xfce4-terminal 
 bindsym $mod+Shift+Delete exec multilockscreen -l
 
 # Xrandr display keybinds
